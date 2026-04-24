@@ -704,22 +704,59 @@ export default function App() {
                     <h2 className="text-2xl font-bold text-gray-800">Sobre o Projeto</h2>
                   </div>
                   
-                  <div className="bg-white p-6 rounded-3xl shadow-sm">
-                    <img
-                      id="logo-uff"
-                      src={appImages.brasaoUFF}
-                      alt="Brasão UFF"
-                      className="h-32 mx-auto mb-4 object-contain"
-                      referrerPolicy="no-referrer"
-                    />
-                    <p className="font-bold text-lg text-gray-700">Desenvolvido por Acadêmicos de Enfermagem</p>
-                    <p className="text-fm-primary font-bold mb-4">Universidade Federal Fluminense</p>
+                  <div className="relative overflow-hidden bg-gradient-to-br from-white via-pink-50/40 to-white p-8 rounded-3xl shadow-sm border border-pink-100/60">
+                    <div className="absolute -top-16 -right-16 w-44 h-44 rounded-full bg-fm-primary/10 blur-3xl pointer-events-none" />
+                    <div className="absolute -bottom-16 -left-16 w-44 h-44 rounded-full bg-pink-200/20 blur-3xl pointer-events-none" />
 
-                    <div className="pt-4 border-t border-pink-100 flex flex-wrap items-center justify-center gap-x-2 gap-y-3">
-                      <img src={appImages.logoEscolaEnfermagem} alt="Escola de Enfermagem Aurora de Afonso Costa" title="Escola de Enfermagem Aurora de Afonso Costa" className="h-36 object-contain" referrerPolicy="no-referrer" />
-                      <img src={appImages.logoPACCS} alt="PACCS UFF" title="PACCS UFF" className="h-36 object-contain" referrerPolicy="no-referrer" />
-                      <img src={appImages.logoGrupoPesquisa} alt="Grupo de Pesquisa Maternidade" title="Grupo de Pesquisa - Maternidade, Saúde da Mulher e Criança" className="h-24 object-contain" referrerPolicy="no-referrer" />
-                      <img src={appImages.logoPEA} alt="PEA" title="PEA" className="h-24 object-contain" referrerPolicy="no-referrer" />
+                    <div className="relative">
+                      <div className="mx-auto inline-flex items-center justify-center rounded-full bg-white/80 px-4 py-1.5 mb-4 shadow-sm ring-1 ring-pink-100">
+                        <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-fm-primary">Universidade Federal Fluminense</span>
+                      </div>
+
+                      <div className="mx-auto mb-5 inline-flex items-center justify-center rounded-3xl bg-white p-5 shadow-md shadow-pink-100/60 ring-1 ring-pink-100">
+                        <img
+                          id="logo-uff"
+                          src={appImages.brasaoUFF}
+                          alt="Brasão UFF"
+                          className="h-28 object-contain"
+                          referrerPolicy="no-referrer"
+                        />
+                      </div>
+
+                      <p className="font-bold text-lg text-gray-800 leading-tight">Desenvolvido por Acadêmicos de Enfermagem</p>
+                      <p className="text-fm-primary font-bold text-sm mt-1">Universidade Federal Fluminense</p>
+                    </div>
+
+                    <div className="relative mt-7 pt-6 border-t border-dashed border-pink-200/80">
+                      <h4 className="text-[11px] font-bold uppercase tracking-[0.22em] text-pink-400 mb-5">
+                        Em parceria com
+                      </h4>
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        {[
+                          { src: appImages.logoEscolaEnfermagem, label: "Escola de Enfermagem", title: "Escola de Enfermagem Aurora de Afonso Costa" },
+                          { src: appImages.logoPACCS, label: "PACCS UFF", title: "PACCS UFF" },
+                          { src: appImages.logoGrupoPesquisa, label: "Grupo de Pesquisa", title: "Grupo de Pesquisa - Maternidade, Saúde da Mulher e Criança" },
+                          { src: appImages.logoPEA, label: "PEA", title: "PEA" },
+                        ].map((logo) => (
+                          <div
+                            key={logo.label}
+                            title={logo.title}
+                            className="group flex flex-col items-center justify-end gap-2 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-pink-100/70 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-100/80 hover:ring-fm-primary/30"
+                          >
+                            <div className="flex h-20 w-full items-center justify-center">
+                              <img
+                                src={logo.src}
+                                alt={logo.title}
+                                className="max-h-20 max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                                referrerPolicy="no-referrer"
+                              />
+                            </div>
+                            <span className="text-[10px] font-bold uppercase tracking-wider text-gray-500 text-center leading-tight">
+                              {logo.label}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
 
