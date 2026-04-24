@@ -739,11 +739,11 @@ export default function App() {
                             title={logo.title}
                             className="group flex flex-col items-center justify-end gap-2 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-pink-100/70 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-100/80 hover:ring-fm-primary/30"
                           >
-                            <div className="flex h-20 w-full items-center justify-center">
+                            <div className="flex h-24 w-full items-center justify-center">
                               <img
                                 src={logo.src}
                                 alt={logo.title}
-                                className="max-h-20 max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                                className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
                                 referrerPolicy="no-referrer"
                               />
                             </div>
