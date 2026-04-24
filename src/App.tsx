@@ -708,12 +708,8 @@ export default function App() {
                     <div className="absolute -top-16 -right-16 w-44 h-44 rounded-full bg-fm-primary/10 blur-3xl pointer-events-none" />
                     <div className="absolute -bottom-16 -left-16 w-44 h-44 rounded-full bg-pink-200/20 blur-3xl pointer-events-none" />
 
-                    <div className="relative">
-                      <div className="mx-auto inline-flex items-center justify-center rounded-full bg-white/80 px-4 py-1.5 mb-4 shadow-sm ring-1 ring-pink-100">
-                        <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-fm-primary">Universidade Federal Fluminense</span>
-                      </div>
-
-                      <div className="mx-auto mb-5 inline-flex items-center justify-center rounded-3xl bg-white p-5 shadow-md shadow-pink-100/60 ring-1 ring-pink-100">
+                    <div className="relative flex flex-col items-center">
+                      <div className="mb-5 flex items-center justify-center rounded-3xl bg-white p-5 shadow-md shadow-pink-100/60 ring-1 ring-pink-100">
                         <img
                           id="logo-uff"
                           src={appImages.brasaoUFF}
@@ -723,8 +719,8 @@ export default function App() {
                         />
                       </div>
 
-                      <p className="font-bold text-lg text-gray-800 leading-tight">Desenvolvido por Acadêmicos de Enfermagem</p>
-                      <p className="text-fm-primary font-bold text-sm mt-1">Universidade Federal Fluminense</p>
+                      <p className="font-bold text-lg text-gray-800 leading-tight text-center">Desenvolvido por Acadêmicos de Enfermagem</p>
+                      <p className="text-fm-primary font-bold text-sm mt-1 text-center">Universidade Federal Fluminense</p>
                     </div>
 
                     <div className="relative mt-7 pt-6 border-t border-dashed border-pink-200/80">
