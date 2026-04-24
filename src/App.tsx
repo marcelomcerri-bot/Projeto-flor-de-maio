@@ -37,7 +37,20 @@ const appImages = {
   posicoes: imagePath('posicoes-v2.jpeg'),
   bancoDuvidas: imagePath('banco-de-duvidas.jpeg'),
   logoUFF: imagePath('logo-uff-novo.jpeg'),
+  brasaoUFF: imagePath('brasao-uff.webp'),
+  logoPEA: imagePath('logo-pea.jpg'),
+  logoPACCS: imagePath('logo-paccs.jpeg'),
+  logoGrupoPesquisa: imagePath('logo-grupo-pesquisa.jpeg'),
+  logoEscolaEnfermagem: imagePath('logo-escola-enfermagem.jpeg'),
 };
+
+const headerLogos: { src: string; alt: string }[] = [
+  { src: imagePath('brasao-uff.webp'), alt: 'Brasão UFF' },
+  { src: imagePath('logo-escola-enfermagem.jpeg'), alt: 'Escola de Enfermagem Aurora de Afonso Costa' },
+  { src: imagePath('logo-paccs.jpeg'), alt: 'PACCS UFF' },
+  { src: imagePath('logo-grupo-pesquisa.jpeg'), alt: 'Grupo de Pesquisa Maternidade' },
+  { src: imagePath('logo-pea.jpg'), alt: 'PEA' },
+];
 
 type Tab = 'inicio' | 'banco' | 'duvidas' | 'comunidade' | 'sobre';
 
@@ -340,6 +353,18 @@ export default function App() {
             <p className="mt-1 text-xs font-semibold uppercase tracking-[0.22em] text-pink-300">
               Amamentação
             </p>
+            <div className="mt-4 grid grid-cols-3 gap-2 items-center justify-items-center">
+              {headerLogos.map((logo) => (
+                <img
+                  key={logo.alt}
+                  src={logo.src}
+                  alt={logo.alt}
+                  title={logo.alt}
+                  className="h-10 w-10 object-contain"
+                  referrerPolicy="no-referrer"
+                />
+              ))}
+            </div>
           </div>
         </div>
         <nav className="flex-1 px-5 py-3 space-y-3">
@@ -370,6 +395,18 @@ export default function App() {
           <h1 className="text-2xl font-black text-fm-primary flex items-center justify-center gap-2 drop-shadow-sm">
             <span className="text-3xl">🌸</span> Flor de Maio
           </h1>
+          <div className="mt-3 flex items-center justify-center gap-3 flex-wrap">
+            {headerLogos.map((logo) => (
+              <img
+                key={logo.alt}
+                src={logo.src}
+                alt={logo.alt}
+                title={logo.alt}
+                className="h-9 w-9 object-contain"
+                referrerPolicy="no-referrer"
+              />
+            ))}
+          </div>
         </header>
 
         {/* Main Content */}
@@ -700,15 +737,29 @@ export default function App() {
                   </div>
                   
                   <div className="bg-white p-6 rounded-3xl shadow-sm space-y-2">
-                    <img 
-                      id="logo-uff"
-                      src={appImages.logoUFF} 
-                      alt="Logo UFF" 
-                      className="h-24 mx-auto mb-4 object-contain"
-                      referrerPolicy="no-referrer"
-                    />
+                    <div className="flex items-end justify-center gap-4 mb-4">
+                      <img
+                        src={appImages.brasaoUFF}
+                        alt="Brasão UFF"
+                        className="h-24 object-contain"
+                        referrerPolicy="no-referrer"
+                      />
+                      <img
+                        id="logo-uff"
+                        src={appImages.logoUFF}
+                        alt="Logo UFF"
+                        className="h-24 object-contain"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
                     <p className="font-bold text-lg text-gray-700">Desenvolvido por Acadêmicos de Enfermagem</p>
                     <p className="text-fm-primary font-bold">Universidade Federal Fluminense</p>
+                    <div className="pt-4 mt-4 border-t border-pink-100 grid grid-cols-3 gap-3 items-center justify-items-center">
+                      <img src={appImages.logoEscolaEnfermagem} alt="Escola de Enfermagem Aurora de Afonso Costa" title="Escola de Enfermagem Aurora de Afonso Costa" className="h-14 object-contain" referrerPolicy="no-referrer" />
+                      <img src={appImages.logoPACCS} alt="PACCS UFF" title="PACCS UFF" className="h-14 object-contain" referrerPolicy="no-referrer" />
+                      <img src={appImages.logoGrupoPesquisa} alt="Grupo de Pesquisa Maternidade" title="Grupo de Pesquisa - Maternidade, Saúde da Mulher e Criança" className="h-14 object-contain" referrerPolicy="no-referrer" />
+                      <img src={appImages.logoPEA} alt="PEA" title="PEA" className="h-14 object-contain col-start-2" referrerPolicy="no-referrer" />
+                    </div>
                   </div>
 
                   <div className="space-y-3">
