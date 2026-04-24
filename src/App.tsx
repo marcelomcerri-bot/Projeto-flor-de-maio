@@ -716,8 +716,8 @@ export default function App() {
                     <p className="text-fm-primary font-bold mb-4">Universidade Federal Fluminense</p>
 
                     <div className="pt-4 border-t border-pink-100 flex flex-wrap items-center justify-center gap-x-2 gap-y-3">
-                      <img src={appImages.logoEscolaEnfermagem} alt="Escola de Enfermagem Aurora de Afonso Costa" title="Escola de Enfermagem Aurora de Afonso Costa" className="h-24 object-contain" referrerPolicy="no-referrer" />
-                      <img src={appImages.logoPACCS} alt="PACCS UFF" title="PACCS UFF" className="h-24 object-contain" referrerPolicy="no-referrer" />
+                      <img src={appImages.logoEscolaEnfermagem} alt="Escola de Enfermagem Aurora de Afonso Costa" title="Escola de Enfermagem Aurora de Afonso Costa" className="h-36 object-contain" referrerPolicy="no-referrer" />
+                      <img src={appImages.logoPACCS} alt="PACCS UFF" title="PACCS UFF" className="h-36 object-contain" referrerPolicy="no-referrer" />
                       <img src={appImages.logoGrupoPesquisa} alt="Grupo de Pesquisa Maternidade" title="Grupo de Pesquisa - Maternidade, Saúde da Mulher e Criança" className="h-24 object-contain" referrerPolicy="no-referrer" />
                       <img src={appImages.logoPEA} alt="PEA" title="PEA" className="h-24 object-contain" referrerPolicy="no-referrer" />
                     </div>
