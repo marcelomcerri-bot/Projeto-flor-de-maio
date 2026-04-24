@@ -709,12 +709,12 @@ export default function App() {
                     <div className="absolute -bottom-16 -left-16 w-44 h-44 rounded-full bg-pink-200/20 blur-3xl pointer-events-none" />
 
                     <div className="relative flex flex-col items-center">
-                      <div className="mb-5 flex items-center justify-center rounded-3xl bg-white p-5 shadow-md shadow-pink-100/60 ring-1 ring-pink-100">
+                      <div className="relative mb-5 flex items-center justify-center rounded-[28px] bg-gradient-to-br from-white/95 via-pink-50/70 to-white/90 backdrop-blur-sm p-6 shadow-[0_12px_30px_-12px_rgba(255,133,162,0.35)] ring-1 ring-white/80 before:absolute before:inset-0 before:rounded-[28px] before:bg-gradient-to-br before:from-white/40 before:to-transparent before:pointer-events-none">
                         <img
                           id="logo-uff"
                           src={appImages.brasaoUFF}
                           alt="Brasão UFF"
-                          className="h-28 object-contain"
+                          className="relative h-28 object-contain drop-shadow-sm"
                           referrerPolicy="no-referrer"
                         />
                       </div>
@@ -737,17 +737,19 @@ export default function App() {
                           <div
                             key={logo.label}
                             title={logo.title}
-                            className="group flex flex-col items-center justify-end gap-2 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-pink-100/70 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-pink-100/80 hover:ring-fm-primary/30"
+                            className="group relative flex flex-col items-center justify-end gap-3 overflow-hidden rounded-2xl bg-gradient-to-br from-white/95 via-pink-50/60 to-white/85 backdrop-blur-sm p-4 pt-5 shadow-[0_8px_24px_-12px_rgba(255,133,162,0.35)] ring-1 ring-white/70 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_36px_-14px_rgba(255,133,162,0.55)] hover:ring-fm-primary/30"
                           >
-                            <div className="flex h-24 w-full items-center justify-center">
+                            <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-pink-100/40" />
+                            <div className="pointer-events-none absolute -top-8 -right-8 h-20 w-20 rounded-full bg-fm-primary/10 blur-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                            <div className="relative flex h-24 w-full items-center justify-center">
                               <img
                                 src={logo.src}
                                 alt={logo.title}
-                                className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                                className="h-full w-full object-contain drop-shadow-[0_2px_6px_rgba(255,133,162,0.18)] transition-transform duration-300 group-hover:scale-105"
                                 referrerPolicy="no-referrer"
                               />
                             </div>
-                            <span className="text-[10px] font-bold uppercase tracking-wider text-gray-500 text-center leading-tight">
+                            <span className="relative text-[10px] font-bold uppercase tracking-wider text-pink-400/90 group-hover:text-fm-primary text-center leading-tight transition-colors duration-300">
                               {logo.label}
                             </span>
                           </div>
