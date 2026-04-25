@@ -4,6 +4,9 @@
  */
 
 import React, { useState, useEffect } from 'react';
+import imgPegaCorretaIncorreta from '@assets/WhatsApp_Image_2026-04-11_at_15.08.22_(1)_1777122718619.jpeg';
+import imgPosicoesAmamentacao from '@assets/WhatsApp_Image_2026-04-11_at_15.08.21_1777122718620.jpeg';
+import imgTiposLeite from '@assets/WhatsApp_Image_2026-04-11_at_15.08.22_(2)_1777122718619.jpeg';
 import { 
   Baby,
   Shield,
@@ -190,7 +193,7 @@ export default function App() {
         "O que pode acontecer é o bebê não mamar tempo suficiente para chegar ao leite do final da mamada.",
         "Esse leite posterior é mais gorduroso e ajuda na saciedade."
       ],
-      img: appImages.bancoDuvidas
+      img: imgTiposLeite
     },
     {
       q: "Silicone interfere na amamentação?",
@@ -851,10 +854,9 @@ export default function App() {
             </h4>
             <div className="mb-3 rounded-xl overflow-hidden border border-pink-100 shadow-sm">
               <img
-                src={appImages.guiaDePega}
+                src={imgPegaCorretaIncorreta}
                 alt="Demonstração da Pega Correta e Incorreta"
                 className="w-full h-auto"
-                referrerPolicy="no-referrer"
               />
             </div>
             <ul className="list-disc pl-5 space-y-1 text-gray-600">
@@ -870,10 +872,9 @@ export default function App() {
             </h4>
             <div className="rounded-xl overflow-hidden border border-pink-100 shadow-sm">
               <img
-                src={appImages.posicoes}
+                src={imgPosicoesAmamentacao}
                 alt="Posições Tradicional, Transversal, Invertida e Deitada de Lado"
                 className="w-full h-auto"
-                referrerPolicy="no-referrer"
               />
             </div>
           </div>
